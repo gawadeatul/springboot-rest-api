@@ -1,2 +1,4 @@
 # springboot-rest-api
-MicroServices with SpringBoot
+
+REST API with SprinBoot.
+
