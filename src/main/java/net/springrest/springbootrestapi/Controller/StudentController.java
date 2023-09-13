@@ -37,9 +37,8 @@ public class StudentController {
     // {id} - URI template variable
     // http://localhost:8080/students/1/atul/gawade
     @GetMapping("students/{id}/{first-name}/{last-name}")
-    public Student studentsPathVariable(@PathVariable("id") int studentId,
-                                        @PathVariable("first-name") String firstName,
-                                        @PathVariable("last-name") String lastName) {
+	public Student studentsPathVariable(@PathVariable("id") int studentId, @PathVariable("first-name") String firstName,
+			@PathVariable("last-name") String lastName) {
 
         return new Student(studentId, firstName, lastName);
     }
@@ -47,9 +46,8 @@ public class StudentController {
     // Spring boot REST API with Request Param
     //  http://localhost:8080/students/query?id=1&firstName=Ramesh&lastName=Fadatare
     @GetMapping("students/query")
-    public Student studentRequestVariable(@RequestParam int id,
-                                          @RequestParam String firstName,
-                                          @RequestParam String lastName) {
+	public Student studentRequestVariable(@RequestParam int id, @RequestParam String firstName,
+			@RequestParam String lastName) {
         return new Student(id, firstName, lastName);
     }
 }
